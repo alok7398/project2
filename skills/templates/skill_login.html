@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1>Welcome to login page</h1>
+
+
+
+<div class="form-container">
+    <form method="post" class="form-box">
+        {% csrf_token %}
+
+        <h2>Login</h2>
+
+        <div class="input-group">
+            <label>email</label>
+            <input type="email" name="email" placeholder="email">
+        </div>
+
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter your password">
+        </div>
+
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+
+
+{% endblock %}
+
